@@ -1,0 +1,459 @@
+* {box-sizing:border-box}
+
+.menu-bar {
+  position: fixed;
+  top: 0;
+  width: 1430px;;
+  background-color: #333;
+  opacity: 40%;
+  z-index: 100;
+  border-radius: 25px; /* Adjust the value to control the curve */
+  margin: 10px; /* Adds spacing around the menu bar */
+  padding: 10px 10px; /* Adds padding inside the menu bar */
+  display: flex; /* Flexbox for alignment */
+  align-items: center;
+}
+
+/* Menu list styling */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+.menu > li {
+  position: relative;
+}
+
+/* Menu links styling */
+.menu a {
+  text-decoration: none;
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.menu a:hover {
+  background-color: #575757;
+}
+
+/* Dropdown content styling */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: #575757;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Dropdown button styling */
+.dropbtn {
+  cursor: pointer;
+}
+
+
+
+#header{
+    min-height: 100vh;
+    width: 100%;
+    
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.text-box p{
+    margin: 20px 0 40px;
+    font-size: 20px;
+    color: #414141;
+}
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 5px solid #525252;
+    border-radius: 20px;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+    background-color: #525252;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hero-btn:hover{
+    border: 1px solid #424242;
+    background: #363636;
+}
+.video-cover {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* page content */
+h1, h2, h3 {
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 30vh; 
+}
+
+h2 { font-size: 3rem; }
+
+@media (max-width: 750px) {
+    #background-video {height: 100vh;
+  width: 5vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;  }
+    body {
+      background: no-repeat;
+      background-size: cover;
+    }
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 93%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+#portfolio, contact{
+        margin-top: 10%;
+}
+
+.portfolio-text, contact-text{
+        text-align: center;
+        margin-bottom: 5%;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.card {
+  background-color: #121212;
+  color: white;
+  padding: 1rem;
+  height: 13rem;
+}
+
+.card h3{
+        font-size: 2rem;
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 120;
+        
+}
+
+.card img{width: 100%;
+
+
+        
+}
+
+.project-2-img{
+        height: 76%;
+}
+
+.card img:hover{
+        opacity: 80%;
+        
+}
+
+.project-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 60px;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #525252;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+    background-color: #525252;
+    border-radius: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.project-btn:hover{
+    border: 1px solid #363636;
+    background: #363636;
+}
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+.cards {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  
+   
+  
+}
+
+@media (max-width: 600px) {
+  .cards { grid-template-columns: repeat(1, 1fr); }
+  .card {
+          height: 360px;
+  }
+
+  .card h2 {
+          font-size: 10px;
+  }
+  .card img{height:250px;
+
+
+        
+}
+
+.project-btn{
+        margin-left:95px;
+}
+}
+
+
+
+  
+@media (min-width: 800px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  .card {
+          height: 300px;
+  }
+  
+  
+   
+  
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+  .card {
+          height: 300px;
+  }
+}
+
+
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+    
+}
+
+.icons .fa{
+    color: #ffffff;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+@media screen and (max-width: 768px) {
+  /* Stack logo and menu items vertically */
+  .menu-bar {
+    flex-direction: column; /* Stack items */
+    align-items: flex-start; /* Align items to the left */
+    padding: 15px; /* Add more padding on small screens */
+  }
+
+  .logo img {
+    height: 35px; /* Reduce logo size on mobile */
+    margin-right: 0; /* Remove extra margin on the right */
+  }
+
+  /* Menu items should be stacked */
+  .menu {
+    display: flex;
+    flex-direction: column; /* Stack menu items vertically */
+    width: 100%; /* Ensure the menu takes up full width */
+    align-items: flex-start; /* Align to the left */
+    margin-top: 10px; /* Spacing between logo and menu */
+  }
+
+  .menu a {
+    padding: 12px 20px; /* More padding for touch screens */
+    width: 100%; /* Menu items take up full width */
+    text-align: left; /* Align text to the left */
+  }
+
+  /* Dropdown content on mobile */
+  .dropdown-content {
+    position: relative; /* Show dropdown below the parent menu */
+    box-shadow: none; /* Remove shadow on mobile */
+    min-width: 100%; /* Ensure dropdown takes full width */
+  }
+
+  /* Hover effects for dropdowns will be disabled on mobile */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
